@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useCallback } from 'react'
-import { currentUser, mockPosts, suggestedUsers } from '../data/mockData'
+import { currentUser, mockPosts, suggestedUsers, mockStories, mockStoriesContent } from '../data/mockData'
 
 export const AppContext = createContext()
 
@@ -8,6 +8,8 @@ const initialState = {
   isAuthenticated: false,
   onboardingComplete: false,
   posts: mockPosts,
+  stories: mockStories,
+  storiesContent: mockStoriesContent,
   following: ['3', '5'],
   userDetails: {
     belt: null,
@@ -61,6 +63,33 @@ function appReducer(state, action) {
         ...state,
         currentUser: { ...state.currentUser, ...action.payload },
       }
+    case 'ADD_STORY': {
+      const { type, url, caption } = action.payload
+      const newStoryItem = {
+        id: 'new_story_' + Date.now(),
+        type,
+        url,
+        caption,
+        time: 'Agora'
+      }
+      
+      const hasRafaStory = state.stories.some(s => s.userId === '1')
+      const updatedStories = hasRafaStory 
+        ? state.stories 
+        : [{ id: 'rafa_story', userId: '1', userName: 'Seu story', seen: false }, ...state.stories]
+      
+      const userStoriesContent = state.storiesContent['1'] || []
+      const updatedStoriesContent = {
+        ...state.storiesContent,
+        '1': [...userStoriesContent, newStoryItem]
+      }
+      
+      return {
+        ...state,
+        stories: updatedStories,
+        storiesContent: updatedStoriesContent
+      }
+    }
     default:
       return state
   }
@@ -97,6 +126,10 @@ export function AppProvider({ children }) {
     dispatch({ type: 'UPDATE_PROFILE', payload: userData })
   }, [])
 
+  const addStory = useCallback((storyData) => {
+    dispatch({ type: 'ADD_STORY', payload: storyData })
+  }, [])
+
   return (
     <AppContext.Provider
       value={{
@@ -108,6 +141,7 @@ export function AppProvider({ children }) {
         toggleBookmark,
         toggleFollow,
         updateProfile,
+        addStory,
       }}
     >
       {children}

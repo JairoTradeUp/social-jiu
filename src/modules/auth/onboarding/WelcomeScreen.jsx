@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import StatusBar from '../../../components/layout/StatusBar'
 import ProgressBar from '../../../components/ui/ProgressBar'
 import Button from '../../../components/ui/Button'
+import Logo from '../../../components/Logo'
 import { useApp } from '../../../context/AppContext'
 
 const WelcomeScreen = () => {
@@ -22,13 +23,15 @@ const WelcomeScreen = () => {
 
       <div className="flex-1 flex flex-col items-center justify-between px-4 py-8 pb-20">
         <div className="flex-1 flex flex-col items-center justify-center text-center">
-          <div className="text-6xl mb-6">🥋</div>
+          <div className="mb-6">
+            <Logo width={121} height={96} />
+          </div>
 
-          <h1 className="text-2xl font-bold text-text-primary mb-2">
+          <h1 className="text-base font-bold text-white mb-2">
             Bem-vindo, {currentUser?.name.split(' ')[0]}! 👋
           </h1>
 
-          <p className="text-text-secondary text-sm max-w-xs">
+          <p className="text-base text-white max-w-xs">
             Vamos configurar seu perfil para conectar você com a comunidade BJJ.
           </p>
         </div>
@@ -37,7 +40,6 @@ const WelcomeScreen = () => {
           fullWidth
           size="lg"
           onClick={() => navigate('/onboarding/belt')}
-          className="h-13"
         >
           Vamos começar
         </Button>

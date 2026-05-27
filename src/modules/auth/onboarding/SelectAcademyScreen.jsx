@@ -33,13 +33,13 @@ const SelectAcademyScreen = () => {
 
       <div className="flex-1 overflow-y-auto px-4 py-6 flex flex-col justify-between pb-20">
         <div>
-          <h1 className="text-2xl font-bold text-text-primary mb-1">Onde você treina?</h1>
-          <p className="text-text-secondary text-sm mb-6">Selecione sua academia</p>
+          <h1 className="text-base font-bold text-white mb-1">Onde você treina?</h1>
+          <p className="text-base text-white mb-6">Selecione sua academia</p>
 
           <div className="space-y-4 mb-6">
             <Input
               label="Nome da academia"
-              placeholder="Gracie Barra SP"
+              placeholder="Alliance SP"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               leftIcon={MapPin}
@@ -62,11 +62,10 @@ const SelectAcademyScreen = () => {
                   setSearch(academy.name)
                   setCity(academy.city)
                 }}
-                className={`w-full p-4 rounded-3xl border transition-colors flex items-center gap-3 ${
-                  selectedAcademy === academy.id
+                className={`w-full p-4 rounded-3xl border transition-colors flex items-center gap-3 ${selectedAcademy === academy.id
                     ? 'border-brand-red bg-surface-elevated'
                     : 'border-surface-border bg-surface-card'
-                }`}
+                  }`}
               >
                 <Avatar name={academy.name} belt="azul" size="sm" />
                 <div className="flex-1 text-left">
@@ -83,13 +82,13 @@ const SelectAcademyScreen = () => {
               onClick={() => setNoAcademy(!noAcademy)}
               className="w-5 h-5 rounded border border-surface-border flex items-center justify-center transition-colors"
               style={{
-                backgroundColor: noAcademy ? '#C0203A' : 'transparent',
-                borderColor: noAcademy ? '#C0203A' : '#2A2A2A',
+                backgroundColor: noAcademy ? '#d9434f' : 'transparent',
+                borderColor: noAcademy ? '#d9434f' : '#2A2A2A',
               }}
             >
               {noAcademy && <span className="text-white text-xs">✓</span>}
             </button>
-            <p className="text-text-secondary text-sm">Treino em casa / sem academia</p>
+            <p className="text-white text-base">Treino em casa / sem academia</p>
           </div>
         </div>
 
@@ -98,7 +97,6 @@ const SelectAcademyScreen = () => {
           size="lg"
           onClick={() => navigate('/onboarding/interests')}
           disabled={!selectedAcademy && !noAcademy}
-          className="h-13"
         >
           Continuar
         </Button>

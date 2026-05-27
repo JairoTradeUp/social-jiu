@@ -12,8 +12,8 @@ const OnboardingCompleteScreen = () => {
   useEffect(() => {
     completeOnboarding({
       belt: 'preta',
-      academy: 'Gracie Barra SP',
-      professor: 'Carlos Gracie Jr.',
+      academy: 'Alliance SP',
+      professor: 'João Chiozzi Jr.',
       practicingYears: 8,
       interests: ['1', '2', '3'],
     })
@@ -39,11 +39,11 @@ const OnboardingCompleteScreen = () => {
           <span className="text-4xl">✓</span>
         </motion.div>
 
-        <h1 className="text-3xl font-bold text-text-primary mb-2">
+        <h1 className="text-base font-bold text-white mb-2">
           Tudo pronto! 🎉
         </h1>
 
-        <p className="text-text-secondary text-sm max-w-xs mb-12">
+        <p className="text-base text-white max-w-xs mb-12">
           Bem-vindo à maior comunidade de BJJ do Brasil
         </p>
 
@@ -51,7 +51,7 @@ const OnboardingCompleteScreen = () => {
           fullWidth
           size="lg"
           onClick={() => navigate('/feed')}
-          className="max-w-xs h-13"
+          className="max-w-xs"
         >
           Explorar o Social Jiu
         </Button>

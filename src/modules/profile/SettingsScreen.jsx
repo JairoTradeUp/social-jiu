@@ -7,10 +7,12 @@ import TopBar from '../../components/layout/TopBar'
 import Button from '../../components/ui/Button'
 import Avatar from '../../components/ui/Avatar'
 import { useApp } from '../../context/AppContext'
+import { currentUser as defaultUser } from '../../data/mockData'
 
 const SettingsScreen = () => {
   const navigate = useNavigate()
-  const { currentUser, logout } = useApp()
+  const { currentUser: contextUser, logout } = useApp()
+  const currentUser = contextUser || defaultUser
   const [showLogoutModal, setShowLogoutModal] = useState(false)
   const [notifications, setNotifications] = useState(true)
   const [darkMode, setDarkMode] = useState(true)

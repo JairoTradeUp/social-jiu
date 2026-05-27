@@ -36,8 +36,8 @@ const SuggestedUsersScreen = () => {
 
       <div className="flex-1 overflow-y-auto px-4 py-6 flex flex-col justify-between pb-20">
         <div>
-          <h1 className="text-2xl font-bold text-text-primary mb-1">Pessoas para seguir</h1>
-          <p className="text-text-secondary text-sm mb-6">Baseado nos seus interesses e localização</p>
+          <h1 className="text-base font-bold text-white mb-1">Pessoas para seguir</h1>
+          <p className="text-base text-white mb-6">Baseado nos seus interesses e localização</p>
 
           <div className="space-y-3">
             {suggestedUsers.map((user) => (
@@ -73,7 +73,6 @@ const SuggestedUsersScreen = () => {
             fullWidth
             size="lg"
             onClick={() => navigate('/onboarding/complete')}
-            className="h-13"
           >
             Continuar
           </Button>

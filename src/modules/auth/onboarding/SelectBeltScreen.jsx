@@ -23,8 +23,8 @@ const SelectBeltScreen = () => {
 
       <div className="flex-1 overflow-y-auto px-4 py-6 flex flex-col justify-between pb-20">
         <div>
-          <h1 className="text-2xl font-bold text-text-primary mb-1">Qual é sua faixa?</h1>
-          <p className="text-text-secondary text-sm mb-6">Selecione sua faixa atual</p>
+          <h1 className="text-base font-bold text-white mb-1">Qual é sua faixa?</h1>
+          <p className="text-base text-white mb-6">Selecione sua faixa atual</p>
 
           <div className="grid grid-cols-2 gap-3">
             {allBelts.map((belt) => {
@@ -57,7 +57,6 @@ const SelectBeltScreen = () => {
           size="lg"
           onClick={() => navigate('/onboarding/academy')}
           disabled={!selectedBelt}
-          className="h-13"
         >
           Continuar
         </Button>

@@ -8,10 +8,12 @@ import Button from '../../components/ui/Button'
 import Input from '../../components/ui/Input'
 import Avatar from '../../components/ui/Avatar'
 import { useApp } from '../../context/AppContext'
+import { currentUser as defaultUser } from '../../data/mockData'
 
 const EditProfileScreen = () => {
   const navigate = useNavigate()
-  const { currentUser, updateProfile } = useApp()
+  const { currentUser: contextUser, updateProfile } = useApp()
+  const currentUser = contextUser || defaultUser
 
   const [formData, setFormData] = useState({
     name: currentUser.name,
@@ -96,7 +98,7 @@ const EditProfileScreen = () => {
                 onChange={(e) => handleChange('bio', e.target.value)}
                 maxLength={150}
                 rows={3}
-                className="w-full bg-surface-card border border-surface-border rounded-3xl px-4 py-3 text-text-primary placeholder-text-tertiary focus:outline-none focus:border-brand-red transition-colors resize-none"
+                className="w-full bg-surface-card border border-surface-border rounded-[8px] px-4 py-3 text-text-primary placeholder-text-tertiary focus:outline-none focus:border-brand-red transition-colors resize-none"
                 placeholder="Conte sobre você"
               />
               <p className="text-text-tertiary text-xs mt-1">{formData.bio.length}/150</p>

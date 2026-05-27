@@ -1,6 +1,6 @@
 const TopBar = ({ title, leftAction, rightAction, transparent = false }) => {
   return (
-    <div className={`h-13 flex items-center justify-between px-4 ${transparent ? '' : 'border-b border-surface-border'}`}>
+    <div className={`flex items-center justify-between px-4 py-4 ${transparent ? '' : 'border-b border-surface-border'}`}>
       <div className="flex-1">
         {leftAction || <div />}
       </div>

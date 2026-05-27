@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Heart, MessageCircle, Share2, Bookmark, MoreHorizontal } from 'lucide-react'
+import { Heart, MessageCircle, Share2, Bookmark, MoreHorizontal, Play } from 'lucide-react'
 import Avatar from '../../components/ui/Avatar'
 import Badge from '../../components/ui/Badge'
+import ShareSheet from '../../components/feed/ShareSheet'
 import { useApp } from '../../context/AppContext'
 
 const PostCard = ({ post }) => {
@@ -11,6 +12,7 @@ const PostCard = ({ post }) => {
   const { toggleLike, toggleBookmark } = useApp()
   const [liked, setLiked] = useState(post.liked)
   const [likes, setLikes] = useState(post.likes)
+  const [isShareOpen, setIsShareOpen] = useState(false)
 
   const handleLike = () => {
     setLiked(!liked)
@@ -27,7 +29,7 @@ const PostCard = ({ post }) => {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="mx-4 mb-4 bg-surface-card border border-surface-border rounded-4xl overflow-hidden"
+      className="mx-4 mb-4 bg-surface-card border border-surface-border rounded-xl overflow-hidden"
     >
       {/* Header */}
       <div className="p-4 flex items-start justify-between">
@@ -50,16 +52,67 @@ const PostCard = ({ post }) => {
 
       {/* Conteúdo */}
       <div className="px-4">
-        <p className="text-text-primary text-sm leading-relaxed mb-3">
-          {post.content}
-        </p>
+        {post.category === 'articles' ? (
+          <div className="flex flex-col mb-3">
+            {/* Tag Destaque do Artigo */}
+            <div className="inline-flex items-center gap-1.5 bg-brand-red/10 border border-brand-red/20 text-brand-red px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider w-fit mb-3">
+              <span className="w-1.5 h-1.5 bg-brand-red rounded-full animate-pulse" />
+              Artigo Técnico
+            </div>
+            
+            {/* Renderização de Conteúdo Estilizado com Parágrafos */}
+            <div className="space-y-3">
+              {post.content.split('\n\n').map((paragraph, index) => {
+                // If it is the first paragraph, make it look like a bold title/lead
+                if (index === 0) {
+                  return (
+                    <h3 key={index} className="text-text-primary font-bold text-base leading-snug">
+                      {paragraph}
+                    </h3>
+                  )
+                }
+                // Bullet point lists
+                if (paragraph.includes('•')) {
+                  return (
+                    <ul key={index} className="text-text-secondary text-sm leading-relaxed space-y-1.5 pl-1 my-1">
+                      {paragraph.split('\n').map((bullet, bIndex) => (
+                        <li key={bIndex} className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1.5 select-none shrink-0 w-1.5 h-1.5 rounded-full bg-brand-red" />
+                          <span>{bullet.replace('•', '').trim()}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )
+                }
+                return (
+                  <p key={index} className="text-text-secondary text-sm leading-relaxed">
+                    {paragraph}
+                  </p>
+                )
+              })}
+            </div>
+          </div>
+        ) : (
+          <p className="text-text-primary text-sm leading-relaxed mb-3">
+            {post.content}
+          </p>
+        )}
 
         {post.image && (
-          <img
-            src={post.image}
-            alt="Post"
-            className="w-full rounded-3xl object-cover aspect-video mb-4"
-          />
+          <div className="relative group cursor-pointer mb-4 overflow-hidden rounded-xl border border-surface-border/50">
+            <img
+              src={post.image}
+              alt="Post"
+              className="w-full object-cover aspect-video transition-transform duration-300 group-hover:scale-102"
+            />
+            {post.category === 'videos' && (
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center backdrop-blur-[1px]">
+                <div className="w-14 h-14 bg-brand-red rounded-full flex items-center justify-center text-white shadow-lg shadow-brand-red/30 transition-transform duration-300 group-hover:scale-110">
+                  <Play size={24} fill="currentColor" className="ml-1 text-white" />
+                </div>
+              </div>
+            )}
+          </div>
         )}
       </div>
 
@@ -87,7 +140,10 @@ const PostCard = ({ post }) => {
             <span className="text-xs font-medium">{post.comments}</span>
           </button>
 
-          <button className="text-text-secondary hover:text-text-primary transition-colors">
+          <button
+            onClick={() => setIsShareOpen(true)}
+            className="text-text-secondary hover:text-text-primary transition-colors"
+          >
             <Share2 size={20} />
           </button>
         </div>
@@ -103,6 +159,12 @@ const PostCard = ({ post }) => {
           />
         </button>
       </div>
+
+      <ShareSheet
+        isOpen={isShareOpen}
+        onClose={() => setIsShareOpen(false)}
+        post={post}
+      />
     </motion.div>
   )
 }

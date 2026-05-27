@@ -18,6 +18,17 @@ import OnboardingCompleteScreen from './modules/auth/onboarding/OnboardingComple
 import FeedScreen from './modules/feed/FeedScreen'
 import CommentsScreen from './modules/feed/CommentsScreen'
 
+import ExploreScreen from './modules/explore/ExploreScreen'
+
+import ConnectionsScreen from './modules/connections/ConnectionsScreen'
+
+import CirclesScreen from './modules/circles/CirclesScreen'
+
+import MessagesScreen from './modules/messages/MessagesScreen'
+import ChatScreen from './modules/messages/ChatScreen'
+
+import NotificationsScreen from './modules/notifications/NotificationsScreen'
+
 import ProfileScreen from './modules/profile/ProfileScreen'
 import EditProfileScreen from './modules/profile/EditProfileScreen'
 import FollowersScreen from './modules/profile/FollowersScreen'
@@ -45,8 +56,12 @@ function App() {
 
           <Route path="/feed" element={<FeedScreen />} />
           <Route path="/feed/:postId/comments" element={<CommentsScreen />} />
-          <Route path="/explore" element={<FeedScreen />} />
-          <Route path="/connections" element={<FeedScreen />} />
+          <Route path="/messages" element={<MessagesScreen />} />
+          <Route path="/messages/:chatId" element={<ChatScreen />} />
+          <Route path="/notifications" element={<NotificationsScreen />} />
+          <Route path="/explore" element={<ExploreScreen />} />
+          <Route path="/connections" element={<ConnectionsScreen />} />
+          <Route path="/circles" element={<CirclesScreen />} />
 
           <Route path="/profile" element={<ProfileScreen />} />
           <Route path="/profile/edit" element={<EditProfileScreen />} />

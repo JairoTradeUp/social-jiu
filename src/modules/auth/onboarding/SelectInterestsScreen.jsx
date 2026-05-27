@@ -17,11 +17,6 @@ const SelectInterestsScreen = () => {
     )
   }
 
-  const getIcon = (iconName) => {
-    const Icon = Icons[iconName.charAt(0).toUpperCase() + iconName.slice(1).replace(/-/g, '')]
-    return Icon ? <Icon size={24} /> : null
-  }
-
   return (
     <motion.div
       initial={{ x: '100%', opacity: 0 }}
@@ -35,8 +30,8 @@ const SelectInterestsScreen = () => {
 
       <div className="flex-1 overflow-y-auto px-4 py-6 flex flex-col justify-between pb-20">
         <div>
-          <h1 className="text-2xl font-bold text-text-primary mb-1">O que você busca?</h1>
-          <p className="text-text-secondary text-sm mb-6">Selecione pelo menos um interesse</p>
+          <h1 className="text-base font-bold text-white mb-1">O que você busca?</h1>
+          <p className="text-base text-white mb-6">Selecione pelo menos um interesse</p>
 
           <div className="grid grid-cols-2 gap-3">
             {interests.map((interest) => {
@@ -56,7 +51,7 @@ const SelectInterestsScreen = () => {
                   }`}
                 >
                   {IconComponent && (
-                    <div style={{ color: isSelected ? '#C0203A' : '#888888' }}>
+                    <div style={{ color: isSelected ? '#d9434f' : '#888888' }}>
                       <IconComponent size={24} />
                     </div>
                   )}
@@ -74,7 +69,6 @@ const SelectInterestsScreen = () => {
           size="lg"
           onClick={() => navigate('/onboarding/suggested')}
           disabled={selectedInterests.length === 0}
-          className="h-13"
         >
           Continuar
         </Button>
