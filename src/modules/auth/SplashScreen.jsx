@@ -22,16 +22,16 @@ const SplashScreen = () => {
       className="w-full h-screen bg-surface-bg flex flex-col items-center justify-center"
     >
       <motion.div
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        className="flex items-center gap-2 mb-4"
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="flex flex-col items-center justify-center"
       >
-        <div className="text-4xl">🥋</div>
+        <img
+          src="/assets/logo-social-jiu.png"
+          alt="App Jiu-jitsu Logo"
+          className="w-48 h-auto object-contain mb-2"
+        />
       </motion.div>
-      <div className="flex items-baseline gap-1">
-        <span className="text-3xl font-bold text-text-primary">Social</span>
-        <span className="text-3xl font-bold text-brand-red">Jiu</span>
-      </div>
     </motion.div>
   )
 }

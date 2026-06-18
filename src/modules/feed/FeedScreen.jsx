@@ -47,19 +47,19 @@ const FeedScreen = () => {
         leftAction={
           <img
             src="/assets/logo-h-social-jiu.png"
-            alt="Social Jiu"
+            alt="App Jiu-jitsu"
             className="h-8 object-contain"
           />
         }
         rightAction={
           <div className="flex items-center gap-4">
-            <button 
+            <button
               onClick={() => navigate('/messages')}
               className="text-white hover:opacity-80 transition-opacity"
             >
               <MessageCircle size={24} />
             </button>
-            <button 
+            <button
               onClick={() => navigate('/notifications')}
               className="text-white hover:opacity-80 transition-opacity"
             >

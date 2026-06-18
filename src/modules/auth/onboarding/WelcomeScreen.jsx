@@ -32,17 +32,25 @@ const WelcomeScreen = () => {
           </h1>
 
           <p className="text-base text-white max-w-xs">
-            Vamos configurar seu perfil para conectar você com a comunidade BJJ.
+            Vamos configurar seu perfil para conectar você com a comunidade Jiu-Jitsu.
           </p>
         </div>
 
-        <Button
-          fullWidth
-          size="lg"
-          onClick={() => navigate('/onboarding/belt')}
-        >
-          Vamos começar
-        </Button>
+        <div className="w-full flex flex-col items-center gap-4">
+          <Button
+            fullWidth
+            size="lg"
+            onClick={() => navigate('/onboarding/belt')}
+          >
+            Vamos começar
+          </Button>
+          <button
+            onClick={() => navigate('/onboarding/complete')}
+            className="text-text-secondary hover:text-white text-sm font-medium transition-colors"
+          >
+            Pular
+          </button>
+        </div>
       </div>
     </motion.div>
   )

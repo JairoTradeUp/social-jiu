@@ -19,9 +19,9 @@ const ProfileScreen = () => {
 
   const userPosts = mockPosts.slice(0, 4)
 
-  // Custom BJJ Profile Data
+  // Custom Jiu-Jitsu Profile Data
   const graduations = [
-    { id: 'g1', belt: 'preta', date: 'Outubro / 2022', professor: 'João Chiozzi Jr.', status: 'Homologada CBJJ' },
+    { id: 'g1', belt: 'preta', date: 'Outubro / 2022', professor: 'João Chiozzi Jr.', status: 'Homologada CJiu-Jitsu' },
     { id: 'g2', belt: 'marrom', date: 'Agosto / 2020', professor: 'João Chiozzi Jr.', status: 'Graduado' },
     { id: 'g3', belt: 'roxa', date: 'Maio / 2018', professor: 'Diego Morais', status: 'Graduado' },
     { id: 'g4', belt: 'azul', date: 'Fevereiro / 2016', professor: 'Diego Morais', status: 'Graduado' },
@@ -29,7 +29,7 @@ const ProfileScreen = () => {
   ]
 
   const academyDetails = {
-    name: 'Alliance SP',
+    name: 'Alliance Alphaville',
     professor: 'João Chiozzi Jr.',
     focus: 'Jiu-Jitsu Competitivo & Defesa Pessoal',
     address: 'Av. Paulista, 1000 - Bela Vista, São Paulo - SP',
@@ -38,10 +38,10 @@ const ProfileScreen = () => {
   }
 
   const eventsParticipated = [
-    { id: 'ev1', name: 'Campeonato Mundial IBJJF 2023', place: '🥈 Vice-Campeão (Faixa Preta Adulto)', date: 'Junho / 2023', category: 'Absoluto' },
-    { id: 'ev2', name: 'Campeonato Pan-Americano IBJJF 2022', place: '🥇 Campeão Pan-Americano (Faixa Marrom)', date: 'Outubro / 2022', category: 'Peso Leio' },
-    { id: 'ev3', name: 'Campeonato Brasileiro CBJJ 2021', place: '🥇 Campeão Brasileiro (Faixa Roxa)', date: 'Maio / 2021', category: 'Peso Leio' },
-    { id: 'ev4', name: 'São Paulo Open IBJJF 2019', place: '🥇 Campeão Peso e Absoluto (Faixa Roxa)', date: 'Julho / 2019', category: 'Peso Leio' },
+    { id: 'ev1', name: 'Campeonato Mundial IJiu-JitsuF 2023', place: '🥈 Vice-Campeão (Faixa Preta Adulto)', date: 'Junho / 2023', category: 'Absoluto' },
+    { id: 'ev2', name: 'Campeonato Pan-Americano IJiu-JitsuF 2022', place: '🥇 Campeão Pan-Americano (Faixa Marrom)', date: 'Outubro / 2022', category: 'Peso Leio' },
+    { id: 'ev3', name: 'Campeonato Brasileiro CJiu-Jitsu 2021', place: '🥇 Campeão Brasileiro (Faixa Roxa)', date: 'Maio / 2021', category: 'Peso Leio' },
+    { id: 'ev4', name: 'São Paulo Open IJiu-JitsuF 2019', place: '🥇 Campeão Peso e Absoluto (Faixa Roxa)', date: 'Julho / 2019', category: 'Peso Leio' },
     { id: 'ev5', name: 'Copa Podio Challenge 2018', place: '🥉 3º Lugar (Faixa Azul Absoluto)', date: 'Março / 2018', category: 'Peso Leio' }
   ]
 
@@ -187,7 +187,7 @@ const ProfileScreen = () => {
           <div className="text-center mb-4">
             <div className="flex items-center justify-center gap-2 mb-1">
               <h1 className="text-2xl font-bold text-text-primary">{currentUser.name}</h1>
-              {currentUser.verified && <CheckCircle2 size={20} color="#C0203A" />}
+              {currentUser.verified && <CheckCircle2 size={20} color="#42587B" />}
             </div>
             <p className="text-text-secondary text-sm">@{currentUser.username}</p>
             <p className="text-text-secondary text-sm">

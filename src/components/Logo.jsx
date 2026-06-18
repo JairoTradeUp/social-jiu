@@ -4,7 +4,7 @@ const Logo = ({ width = 121, height = 96, className = '' }) => {
   return (
     <img
       src="/assets/logo-social-jiu.png"
-      alt="Social Jiu Logo"
+      alt="App Jiu-jitsu Logo"
       className={className}
       style={{
         width: `${width}px`,

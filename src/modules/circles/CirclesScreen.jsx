@@ -31,7 +31,7 @@ const initialCircles = [
         author: 'Gabriel Santos',
         authorBelt: 'coral',
         time: '5h atrás',
-        content: 'Novas regras do No-Gi da IBJJF sobre chaves de calcanhar liberadas para a Faixa Marrom e Preta na categoria adulto. Vamos debater as melhores estratégias no seminário de sexta!',
+        content: 'Novas regras do No-Gi da IJiu-JitsuF sobre chaves de calcanhar liberadas para a Faixa Marrom e Preta na categoria adulto. Vamos debater as melhores estratégias no seminário de sexta!',
         likes: 68,
         comments: 19
       }
@@ -59,7 +59,7 @@ const initialCircles = [
   },
   {
     id: 'c3',
-    name: 'Nutrição & Performance BJJ',
+    name: 'Nutrição & Performance Jiu-Jitsu',
     description: 'Dietas de corte de peso saudável, suplementação e recuperação muscular para treinos de alta intensidade.',
     membersCount: 205,
     postsCount: 32,
@@ -221,21 +221,19 @@ const CirclesScreen = () => {
               <div className="flex border-b border-surface-border -mb-4 pt-1">
                 <button
                   onClick={() => setActiveTab('mine')}
-                  className={`flex-1 text-center py-2.5 text-xs font-semibold border-b-2 transition-colors ${
-                    activeTab === 'mine'
+                  className={`flex-1 text-center py-2.5 text-xs font-semibold border-b-2 transition-colors ${activeTab === 'mine'
                       ? 'border-brand-red text-white'
                       : 'border-transparent text-text-secondary'
-                  }`}
+                    }`}
                 >
                   Meus Círculos
                 </button>
                 <button
                   onClick={() => setActiveTab('explore')}
-                  className={`flex-1 text-center py-2.5 text-xs font-semibold border-b-2 transition-colors ${
-                    activeTab === 'explore'
+                  className={`flex-1 text-center py-2.5 text-xs font-semibold border-b-2 transition-colors ${activeTab === 'explore'
                       ? 'border-brand-red text-white'
                       : 'border-transparent text-text-secondary'
-                  }`}
+                    }`}
                 >
                   Descobrir ({circles.filter(c => !c.joined).length})
                 </button>
@@ -249,8 +247,8 @@ const CirclesScreen = () => {
                   <Users className="text-text-tertiary mb-3 animate-pulse" size={32} />
                   <h3 className="text-text-primary font-semibold text-sm">Nenhum círculo encontrado</h3>
                   <p className="text-text-secondary text-[11px] max-w-[200px] mt-1">
-                    {activeTab === 'mine' 
-                      ? 'Você ainda não participa de nenhuma comunidade exclusiva. Vá na aba Descobrir para entrar nos grupos!' 
+                    {activeTab === 'mine'
+                      ? 'Você ainda não participa de nenhuma comunidade exclusiva. Vá na aba Descobrir para entrar nos grupos!'
                       : 'Nenhuma nova comunidade encontrada para descobrir.'}
                   </p>
                 </div>
@@ -259,9 +257,8 @@ const CirclesScreen = () => {
                   <div
                     key={circle.id}
                     onClick={() => circle.joined && setActiveCircleDetail(circle)}
-                    className={`p-4 rounded-2xl border bg-white/[0.01] hover:bg-white/[0.03] transition-all cursor-pointer flex flex-col justify-between h-[135px] ${
-                      circle.joined ? 'border-brand-red/10' : 'border-surface-border'
-                    }`}
+                    className={`p-4 rounded-2xl border bg-white/[0.01] hover:bg-white/[0.03] transition-all cursor-pointer flex flex-col justify-between h-[135px] ${circle.joined ? 'border-brand-red/10' : 'border-surface-border'
+                      }`}
                   >
                     <div>
                       <div className="flex items-start justify-between">
@@ -281,7 +278,7 @@ const CirclesScreen = () => {
                           </button>
                         )}
                       </div>
-                      
+
                       <p className="text-[11px] text-text-secondary line-clamp-2 mt-2 leading-relaxed">
                         {circle.description}
                       </p>

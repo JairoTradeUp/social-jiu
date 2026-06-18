@@ -161,7 +161,7 @@ const EditProfileScreen = () => {
               onClick={() => handleChange('isPublic', !formData.isPublic)}
               className="relative w-12 h-6 rounded-full transition-colors"
               style={{
-                backgroundColor: formData.isPublic ? '#C0203A' : '#2A2A2A',
+                backgroundColor: formData.isPublic ? '#42587B' : '#2A2A2A',
               }}
             >
               <div

@@ -12,7 +12,7 @@ const OnboardingCompleteScreen = () => {
   useEffect(() => {
     completeOnboarding({
       belt: 'preta',
-      academy: 'Alliance SP',
+      academy: 'Alliance Alphaville',
       professor: 'João Chiozzi Jr.',
       practicingYears: 8,
       interests: ['1', '2', '3'],
@@ -44,7 +44,7 @@ const OnboardingCompleteScreen = () => {
         </h1>
 
         <p className="text-base text-white max-w-xs mb-12">
-          Bem-vindo à maior comunidade de BJJ do Brasil
+          Bem-vindo à maior comunidade de Jiu-Jitsu.
         </p>
 
         <Button
@@ -53,7 +53,7 @@ const OnboardingCompleteScreen = () => {
           onClick={() => navigate('/feed')}
           className="max-w-xs"
         >
-          Explorar o Social Jiu
+          Explorar o App Jiu-jitsu
         </Button>
       </div>
     </motion.div>

@@ -1,12 +1,15 @@
 import { beltColors } from '../../data/mockData'
 
-const Badge = ({ belt, className = '', size = 'sm' }) => {
+const Badge = ({ belt, time, className = '', size = 'sm' }) => {
   const beltColor = beltColors[belt] || beltColors.branca
 
   const sizeClasses = {
     sm: 'text-xs px-2.5 py-1',
     md: 'text-sm px-3 py-1.5',
   }
+
+  const beltText = belt.charAt(0).toUpperCase() + belt.slice(1)
+  const displayText = time ? `${beltText} - ${time}` : beltText
 
   return (
     <span
@@ -16,7 +19,7 @@ const Badge = ({ belt, className = '', size = 'sm' }) => {
         color: beltColor.text,
       }}
     >
-      {belt.charAt(0).toUpperCase() + belt.slice(1)}
+      {displayText}
     </span>
   )
 }

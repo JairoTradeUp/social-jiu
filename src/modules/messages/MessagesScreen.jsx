@@ -10,7 +10,7 @@ export const mockChats = [
     id: '2',
     userName: 'Ana Paula Silva',
     userBelt: 'roxa',
-    userAcademy: 'Alliance SP',
+    userAcademy: 'Alliance Alphaville',
     lastMessage: 'E aí, vamos treinar hoje na Alliance?',
     time: '14:32',
     unread: true,
@@ -63,13 +63,13 @@ export const mockChats = [
 ]
 
 const contacts = [
-  { id: '2', name: 'Ana Paula Silva', belt: 'roxa', academy: 'Alliance SP' },
+  { id: '2', name: 'Ana Paula Silva', belt: 'roxa', academy: 'Alliance Alphaville' },
   { id: '3', name: 'Bruno Goulart', belt: 'marrom', academy: 'Checkmat RJ' },
   { id: '4', name: 'Fernanda Costa', belt: 'azul', academy: 'Gracie Humaitá' },
   { id: '5', name: 'Diego Morais', belt: 'preta', academy: 'Nova União' },
   { id: '6', name: 'Camila Rocha', belt: 'azul', academy: 'GF Team' },
-  { id: '7', name: 'Gabriel Santos', belt: 'coral', academy: 'Alliance SP' },
-  { id: '8', name: 'Beatriz Ramos', belt: 'preta', academy: 'Alliance SP' }
+  { id: '7', name: 'Gabriel Santos', belt: 'coral', academy: 'Alliance Alphaville' },
+  { id: '8', name: 'Beatriz Ramos', belt: 'preta', academy: 'Alliance Alphaville' }
 ]
 
 const MessagesScreen = () => {
@@ -167,8 +167,8 @@ const MessagesScreen = () => {
               key={chat.id}
               onClick={() => navigate(`/messages/${chat.id}`)}
               className={`flex items-center justify-between p-3 rounded-2xl border transition-all cursor-pointer ${chat.unread
-                  ? 'bg-white/[0.03] border-brand-red/10'
-                  : 'bg-transparent border-transparent hover:bg-white/[0.01]'
+                ? 'bg-white/[0.03] border-brand-red/10'
+                : 'bg-transparent border-transparent hover:bg-white/[0.01]'
                 }`}
             >
               <div className="flex items-center gap-3.5 flex-1 min-w-0">
@@ -195,7 +195,7 @@ const MessagesScreen = () => {
               <div className="flex flex-col items-end gap-1.5 ml-3 shrink-0">
                 <span className="text-[10px] text-text-tertiary">{chat.time}</span>
                 {chat.unread && (
-                  <Circle size={8} fill="#d9434f" className="text-brand-red animate-pulse" />
+                  <Circle size={8} fill="#42587B" className="text-brand-red animate-pulse" />
                 )}
               </div>
             </div>

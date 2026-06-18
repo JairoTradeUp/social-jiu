@@ -25,7 +25,7 @@ const RegisterScreen = () => {
 
   const strength = getPasswordStrength(password)
   const strengthColor = {
-    weak: '#C0203A',
+    weak: '#42587B',
     medium: '#F59E0B',
     strong: '#10B981',
   }
@@ -132,8 +132,8 @@ const RegisterScreen = () => {
               onClick={() => setTermsAccepted(!termsAccepted)}
               className="mt-1 w-5 h-5 rounded border border-surface-border flex items-center justify-center transition-colors"
               style={{
-                backgroundColor: termsAccepted ? '#C0203A' : 'transparent',
-                borderColor: termsAccepted ? '#C0203A' : '#2A2A2A',
+                backgroundColor: termsAccepted ? '#42587B' : 'transparent',
+                borderColor: termsAccepted ? '#42587B' : '#2A2A2A',
               }}
             >
               {termsAccepted && <Check size={16} className="text-white" />}

@@ -39,7 +39,7 @@ const SelectAcademyScreen = () => {
           <div className="space-y-4 mb-6">
             <Input
               label="Nome da academia"
-              placeholder="Alliance SP"
+              placeholder="Alliance Alphaville"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               leftIcon={MapPin}
@@ -63,8 +63,8 @@ const SelectAcademyScreen = () => {
                   setCity(academy.city)
                 }}
                 className={`w-full p-4 rounded-3xl border transition-colors flex items-center gap-3 ${selectedAcademy === academy.id
-                    ? 'border-brand-red bg-surface-elevated'
-                    : 'border-surface-border bg-surface-card'
+                  ? 'border-brand-red bg-surface-elevated'
+                  : 'border-surface-border bg-surface-card'
                   }`}
               >
                 <Avatar name={academy.name} belt="azul" size="sm" />
@@ -82,8 +82,8 @@ const SelectAcademyScreen = () => {
               onClick={() => setNoAcademy(!noAcademy)}
               className="w-5 h-5 rounded border border-surface-border flex items-center justify-center transition-colors"
               style={{
-                backgroundColor: noAcademy ? '#d9434f' : 'transparent',
-                borderColor: noAcademy ? '#d9434f' : '#2A2A2A',
+                backgroundColor: noAcademy ? '#42587B' : 'transparent',
+                borderColor: noAcademy ? '#42587B' : '#2A2A2A',
               }}
             >
               {noAcademy && <span className="text-white text-xs">✓</span>}
@@ -92,14 +92,22 @@ const SelectAcademyScreen = () => {
           </div>
         </div>
 
-        <Button
-          fullWidth
-          size="lg"
-          onClick={() => navigate('/onboarding/interests')}
-          disabled={!selectedAcademy && !noAcademy}
-        >
-          Continuar
-        </Button>
+        <div className="w-full flex flex-col items-center gap-4">
+          <Button
+            fullWidth
+            size="lg"
+            onClick={() => navigate('/onboarding/interests')}
+            disabled={!selectedAcademy && !noAcademy}
+          >
+            Continuar
+          </Button>
+          <button
+            onClick={() => navigate('/onboarding/complete')}
+            className="text-text-secondary hover:text-white text-sm font-medium transition-colors"
+          >
+            Pular
+          </button>
+        </div>
       </div>
     </motion.div>
   )

@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         brand: {
-          red: '#d9434f',
-          'red-dark': '#C0203A',
+          red: '#556c92ff',
+          'red-dark': '#324462',
           blue: '#2B5FAC',
           'blue-dark': '#1E3F6F',
           navy: '#1B2A4A',
@@ -21,7 +21,7 @@ export default {
           border: '#2A2A2A',
           'border-2': '#3A3A3A',
           'input': '#454a54',
-          'input-border': '#6c87ad',
+          'input-border': '#545F6E',
         },
         text: {
           primary: '#FFFFFF',

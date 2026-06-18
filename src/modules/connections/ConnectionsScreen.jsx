@@ -9,13 +9,13 @@ import Badge from '../../components/ui/Badge'
 import { mockChats } from '../messages/MessagesScreen'
 
 const initialConnections = [
-  { id: '2', name: 'Ana Paula Silva', belt: 'roxa', academy: 'Alliance SP', status: 'online', role: 'Parceiro de Treino' },
-  { id: '3', name: 'Bruno Goulart', belt: 'marrom', academy: 'Checkmat RJ', status: 'online', role: 'Parceiro de Treino' },
-  { id: '4', name: 'Fernanda Costa', belt: 'azul', academy: 'Gracie Humaitá', status: 'offline', role: 'Competidor' },
-  { id: '5', name: 'Diego Morais', belt: 'preta', academy: 'Nova União', status: 'online', role: 'Mestre / Professor' },
-  { id: '6', name: 'Camila Rocha', belt: 'azul', academy: 'GF Team', status: 'offline', role: 'Parceiro de Treino' },
-  { id: '7', name: 'Gabriel Santos', belt: 'coral', academy: 'Alliance SP', status: 'online', role: 'Mestre / Professor' },
-  { id: '8', name: 'Beatriz Ramos', belt: 'preta', academy: 'Alliance SP', status: 'offline', role: 'Competidor' }
+  { id: '2', name: 'Ana Paula Silva', belt: 'roxa', beltTime: '9 meses', academy: 'Alliance Alphaville', status: 'online', role: 'Parceiro de Treino' },
+  { id: '3', name: 'Bruno Goulart', belt: 'marrom', beltTime: '2 anos', academy: 'Checkmat RJ', status: 'online', role: 'Parceiro de Treino' },
+  { id: '4', name: 'Fernanda Costa', belt: 'azul', beltTime: '1 ano', academy: 'Gracie Humaitá', status: 'offline', role: 'Competidor' },
+  { id: '5', name: 'Diego Morais', belt: 'preta', beltTime: '4 anos', academy: 'Nova União', status: 'online', role: 'Mestre / Professor' },
+  { id: '6', name: 'Camila Rocha', belt: 'azul', beltTime: '6 meses', academy: 'GF Team', status: 'offline', role: 'Parceiro de Treino' },
+  { id: '7', name: 'Gabriel Santos', belt: 'coral', beltTime: '10 anos', academy: 'Alliance Alphaville', status: 'online', role: 'Mestre / Professor' },
+  { id: '8', name: 'Beatriz Ramos', belt: 'preta', beltTime: '3 anos', academy: 'Alliance Alphaville', status: 'offline', role: 'Competidor' }
 ]
 
 const ConnectionsScreen = () => {
@@ -134,11 +134,11 @@ const ConnectionsScreen = () => {
 
                   <div className="min-w-0">
                     <div className="flex items-center gap-1.5 flex-wrap">
-                      <h4 className="text-xs font-semibold text-text-primary truncate">{contact.name}</h4>
-                      <Badge belt={contact.belt} size="sm" />
+                      <h4 className="text-sm font-semibold text-text-primary truncate">{contact.name}</h4>
+                      <Badge belt={contact.belt} time={contact.beltTime} size="sm" />
                     </div>
-                    <p className="text-[10px] text-text-secondary mt-0.5 truncate">{contact.academy}</p>
-                    <span className="inline-block text-[9px] bg-white/5 text-text-tertiary px-2 py-0.5 rounded-md mt-1 font-medium">
+                    <p className="text-xs text-text-secondary mt-0.5 truncate">{contact.academy}</p>
+                    <span className="inline-block text-[11px] bg-white/10 text-text-secondary px-2 py-0.5 rounded-md mt-1 font-semibold">
                       {contact.role}
                     </span>
                   </div>

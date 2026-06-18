@@ -1,0 +1,38 @@
+INSTRUÇÕES PARA RECUPERAR O CONTEXTO E MEMÓRIA DO AGENTE App Jiu-jitsu
+==================================================================
+
+Você está prestes a migrar o contexto de desenvolvimento da inteligência artificial para outra estação de trabalho. Siga os passos abaixo na nova máquina para que o agente recupere toda a memória e histórico de chat perfeitamente.
+
+PASSO 1: Preparar a nova máquina
+-------------------------------
+1. Certifique-se de que o Git, Node.js (v18+) e o editor/terminal com o agente integrado estejam instalados na nova máquina.
+2. Clone o repositório do projeto na nova estação de trabalho (ou copie a pasta do projeto):
+   git clone https://github.com/JairoTradeUp/social-jiu.git
+3. Acesse a pasta do projeto clonado e instale as dependências:
+   npm install
+
+PASSO 2: Extrair os dados de contexto do agente
+----------------------------------------------
+1. No arquivo zipado que você possui ("social_jiu_context_backup.zip"), existem os seguintes arquivos e pastas:
+   - .system_generated/logs/transcript.jsonl  (Memória do chat)
+   - social_jiu_state_report.md                (Relatório do estado do projeto)
+   - social_jiu_state_report.md.metadata.json  (Metadados do relatório)
+
+2. Na nova máquina, navegue até a pasta de dados do agente. Geralmente, ela fica em:
+   C:\Users\<Seu-Nome-De-Usuario>\.gemini\antigravity\brain\
+
+3. Dentro dessa pasta "brain", crie uma nova pasta com o mesmo ID exato desta conversa:
+   5cde7c57-0056-4895-8902-5d33a29bfdbc
+
+4. Extraia todo o conteúdo do ZIP diretamente dentro dessa pasta recém-criada, de modo que os caminhos fiquem assim:
+   C:\Users\<Seu-Nome-De-Usuario>\.gemini\antigravity\brain\5cde7c57-0056-4895-8902-5d33a29bfdbc\.system_generated\logs\transcript.jsonl
+   C:\Users\<Seu-Nome-De-Usuario>\.gemini\antigravity\brain\5cde7c57-0056-4895-8902-5d33a29bfdbc\social_jiu_state_report.md
+   C:\Users\<Seu-Nome-De-Usuario>\.gemini\antigravity\brain\5cde7c57-0056-4895-8902-5d33a29bfdbc\social_jiu_state_report.md.metadata.json
+
+PASSO 3: Iniciar o Agente na nova máquina
+-----------------------------------------
+1. Abra o workspace da aplicação na nova estação de trabalho.
+2. Inicie a interação com o agente. Ele lerá automaticamente os logs da pasta 5cde7c57-0056-4895-8902-5d33a29bfdbc e terá 100% de lembrança do estado do projeto, últimas alterações e decisões acordadas!
+
+Dúvidas ou problemas com dependências?
+Consulte o relatório "social_jiu_state_report.md" incluído no ZIP para detalhes de design, cores e configurações de Tailwind v3.

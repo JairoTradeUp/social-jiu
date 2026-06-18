@@ -51,7 +51,7 @@ const SelectInterestsScreen = () => {
                   }`}
                 >
                   {IconComponent && (
-                    <div style={{ color: isSelected ? '#d9434f' : '#888888' }}>
+                    <div style={{ color: isSelected ? '#42587B' : '#888888' }}>
                       <IconComponent size={24} />
                     </div>
                   )}
@@ -64,14 +64,22 @@ const SelectInterestsScreen = () => {
           </div>
         </div>
 
-        <Button
-          fullWidth
-          size="lg"
-          onClick={() => navigate('/onboarding/suggested')}
-          disabled={selectedInterests.length === 0}
-        >
-          Continuar
-        </Button>
+        <div className="w-full flex flex-col items-center gap-4">
+          <Button
+            fullWidth
+            size="lg"
+            onClick={() => navigate('/onboarding/suggested')}
+            disabled={selectedInterests.length === 0}
+          >
+            Continuar
+          </Button>
+          <button
+            onClick={() => navigate('/onboarding/complete')}
+            className="text-text-secondary hover:text-white text-sm font-medium transition-colors"
+          >
+            Pular
+          </button>
+        </div>
       </div>
     </motion.div>
   )

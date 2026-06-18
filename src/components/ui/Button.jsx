@@ -27,7 +27,7 @@ const Button = ({
           gap: '10px',
           alignSelf: 'stretch',
           borderRadius: '8px',
-          background: disabled || loading ? '#888' : '#D9434F',
+          background: disabled || loading ? '#888' : '#42587B',
           boxShadow: '0 -1.2px 0 0 rgba(0, 0, 0, 0.12) inset',
           border: 'none',
           cursor: disabled || loading ? 'not-allowed' : 'pointer',

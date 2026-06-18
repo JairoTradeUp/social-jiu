@@ -61,13 +61,13 @@ const SettingsScreen = () => {
         <div className="my-6">
           <h3 className="text-text-secondary text-xs font-semibold px-4 mb-3 uppercase">Conta</h3>
           <div className="space-y-1">
-            <button className="w-full px-4 py-4 flex items-center justify-between hover:bg-surface-card/50 transition-colors text-text-primary">
+            <div className="w-full px-4 py-4 flex items-center justify-between hover:bg-surface-card/50 transition-colors text-text-primary">
               <span className="text-sm">Notificações</span>
               <button
                 onClick={() => setNotifications(!notifications)}
                 className="relative w-12 h-6 rounded-full transition-colors"
                 style={{
-                  backgroundColor: notifications ? '#C0203A' : '#2A2A2A',
+                  backgroundColor: notifications ? '#42587B' : '#2A2A2A',
                 }}
               >
                 <div
@@ -77,7 +77,7 @@ const SettingsScreen = () => {
                   }}
                 />
               </button>
-            </button>
+            </div>
             <button className="w-full px-4 py-4 flex items-center justify-between hover:bg-surface-card/50 transition-colors text-text-primary">
               <span className="text-sm">Configurações gerais</span>
               <ChevronRight size={20} className="text-text-secondary" />
@@ -89,14 +89,14 @@ const SettingsScreen = () => {
         <div className="my-6">
           <h3 className="text-text-secondary text-xs font-semibold px-4 mb-3 uppercase">Aparência</h3>
           <div className="space-y-1">
-            <button className="w-full px-4 py-4 flex items-center justify-between hover:bg-surface-card/50 transition-colors text-text-primary">
+            <div className="w-full px-4 py-4 flex items-center justify-between hover:bg-surface-card/50 transition-colors text-text-primary">
               <span className="text-sm">Dark Mode</span>
               <button
                 onClick={() => setDarkMode(!darkMode)}
                 disabled
                 className="relative w-12 h-6 rounded-full"
                 style={{
-                  backgroundColor: darkMode ? '#C0203A' : '#2A2A2A',
+                  backgroundColor: darkMode ? '#42587B' : '#2A2A2A',
                 }}
               >
                 <div
@@ -106,7 +106,7 @@ const SettingsScreen = () => {
                   }}
                 />
               </button>
-            </button>
+            </div>
             <button className="w-full px-4 py-4 flex items-center justify-between hover:bg-surface-card/50 transition-colors text-text-primary">
               <span className="text-sm">Idioma</span>
               <span className="text-text-secondary text-sm">Português</span>

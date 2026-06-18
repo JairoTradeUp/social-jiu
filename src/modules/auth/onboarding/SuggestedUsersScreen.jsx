@@ -68,7 +68,7 @@ const SuggestedUsersScreen = () => {
           </div>
         </div>
 
-        <div className="space-y-3">
+        <div className="w-full flex flex-col items-center gap-4">
           <Button
             fullWidth
             size="lg"
@@ -76,14 +76,12 @@ const SuggestedUsersScreen = () => {
           >
             Continuar
           </Button>
-          <Button
-            fullWidth
-            variant="ghost"
-            size="lg"
+          <button
             onClick={() => navigate('/onboarding/complete')}
+            className="text-text-secondary hover:text-white text-sm font-medium transition-colors"
           >
             Pular
-          </Button>
+          </button>
         </div>
       </div>
     </motion.div>

@@ -22,7 +22,7 @@ const initialNotifications = [
     type: 'comment',
     userName: 'Ana Paula Silva',
     userBelt: 'roxa',
-    userAcademy: 'Alliance SP',
+    userAcademy: 'Alliance Alphaville',
     content: 'comentou: "Muito bom, mestre! Vou aplicar hoje no treino no sparring."',
     time: '2h',
     read: false,
@@ -33,7 +33,7 @@ const initialNotifications = [
     type: 'follow',
     userName: 'Gabriel Santos',
     userBelt: 'coral',
-    userAcademy: 'Alliance SP',
+    userAcademy: 'Alliance Alphaville',
     content: 'começou a seguir o seu perfil profissional.',
     time: '5h',
     read: true,
@@ -42,9 +42,9 @@ const initialNotifications = [
   {
     id: '4',
     type: 'belt_update',
-    userName: 'Sistema Social Jiu',
+    userName: 'Sistema App Jiu-jitsu',
     userBelt: 'preta',
-    userAcademy: 'CBJJ Homologação',
+    userAcademy: 'CJiu-Jitsu Homologação',
     content: 'Sua graduação histórica para Faixa Preta foi homologada com sucesso!',
     time: '2d',
     read: true
@@ -186,8 +186,8 @@ const NotificationsScreen = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   className={`flex items-start justify-between p-3.5 rounded-2xl border transition-all ${!notif.read
-                      ? 'bg-white/[0.03] border-brand-red/10'
-                      : 'bg-transparent border-transparent hover:bg-white/[0.01]'
+                    ? 'bg-white/[0.03] border-brand-red/10'
+                    : 'bg-transparent border-transparent hover:bg-white/[0.01]'
                     }`}
                 >
                   <div className="flex gap-3 flex-1 min-w-0">
@@ -223,8 +223,8 @@ const NotificationsScreen = () => {
                           <button
                             onClick={() => handleFollowToggle(notif.id)}
                             className={`text-[10px] font-semibold px-4 py-1.5 rounded-xl transition-all border ${notif.isFollowing
-                                ? 'bg-transparent border-surface-border text-text-secondary'
-                                : 'bg-brand-red border-brand-red text-white hover:opacity-90 active:scale-95 shadow-md'
+                              ? 'bg-transparent border-surface-border text-text-secondary'
+                              : 'bg-brand-red border-brand-red text-white hover:opacity-90 active:scale-95 shadow-md'
                               }`}
                           >
                             {notif.isFollowing ? 'Seguindo' : 'Seguir de Volta'}
@@ -251,8 +251,8 @@ const NotificationsScreen = () => {
                             </>
                           ) : (
                             <span className={`text-[10px] font-medium px-2.5 py-1 rounded-lg border ${notif.accepted
-                                ? 'bg-green-500/10 border-green-500/20 text-green-400'
-                                : 'bg-white/5 border-surface-border text-text-tertiary'
+                              ? 'bg-green-500/10 border-green-500/20 text-green-400'
+                              : 'bg-white/5 border-surface-border text-text-tertiary'
                               }`}>
                               {notif.accepted ? '✓ Presença Confirmada' : '✕ Convite Recusado'}
                             </span>

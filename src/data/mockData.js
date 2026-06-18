@@ -7,7 +7,7 @@ export const currentUser = {
   city: 'São Paulo, SP',
   professor: 'João Chiozzi',
   practicingYears: 8,
-  bio: 'BJJ é estilo de vida. Professor na GB São Paulo. Competidor ativo.',
+  bio: 'Jiu-Jitsu é estilo de vida. Professor na GB São Paulo. Competidor ativo.',
   followers: 1240,
   following: 387,
   posts: 94,
@@ -15,7 +15,7 @@ export const currentUser = {
 }
 
 export const suggestedUsers = [
-  { id: '2', name: 'Ana Paula Silva', username: 'anapaula', belt: 'roxa', academy: 'Alliance SP', city: 'São Paulo, SP', followers: 830, following: false },
+  { id: '2', name: 'Ana Paula Silva', username: 'anapaula', belt: 'roxa', academy: 'Alliance Alphaville', city: 'São Paulo, SP', followers: 830, following: false },
   { id: '3', name: 'Bruno Goulart', username: 'brunogoulart', belt: 'marrom', academy: 'Checkmat RJ', city: 'Rio de Janeiro, RJ', followers: 512, following: true },
   { id: '4', name: 'Fernanda Costa', username: 'fecosta', belt: 'azul', academy: 'Gracie Humaitá', city: 'Curitiba, PR', followers: 291, following: false },
   { id: '5', name: 'Diego Morais', username: 'diegomorais', belt: 'preta', academy: 'Nova União', city: 'Belo Horizonte, MG', followers: 2100, following: true },
@@ -28,7 +28,7 @@ export const mockPosts = [
     userId: '2',
     userName: 'Ana Paula Silva',
     userBelt: 'roxa',
-    userAcademy: 'Alliance SP',
+    userAcademy: 'Alliance Alphaville',
     category: 'images',
     content: 'Treino pesado hoje na Alliance. Passagem de guarda que trabalhamos semanas finalmente encaixou no sparring. O processo é lento mas constante. 🥋',
     image: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80',
@@ -103,7 +103,7 @@ export const mockPosts = [
     userId: '2',
     userName: 'Ana Paula Silva',
     userBelt: 'roxa',
-    userAcademy: 'Alliance SP',
+    userAcademy: 'Alliance Alphaville',
     category: 'videos',
     content: '[TUTORIAL] 5 transições de meia-guarda fundamentais para surpreender faixas mais graduados. Assista ao vídeo e salve para estudar antes do treino! 🥋🎥',
     image: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80',
@@ -120,7 +120,7 @@ export const mockPosts = [
     userBelt: 'marrom',
     userAcademy: 'Checkmat RJ',
     category: 'articles',
-    content: 'Os Segredos da Leg Lock Moderna\n\nCom a evolução competitiva do Jiu-Jitsu sem pano (No-Gi), as chaves de calcanhar (Heel Hooks) e as transições de chaves de perna tornaram-se o ponto divisor das grandes lutas.\n\nFizemos uma análise detalhada dos últimos campeonatos da IBJJF e ADCC para decifrar a dinâmica do jogo moderno de chaves de perna:\n\n• Detalhe 1: O posicionamento em Ashi Garami continua sendo a fundação mais segura para a entrada de golpes.\n• Detalhe 2: A transição rápida do Single Leg X para a Honey Hole define os maiores índices de finalizações atuais.\n• Detalhe 3: O sistema defensivo moderno prioriza a rotação do calcanhar antes do encaixe da pressão de joelho.\n\nEstudar esses princípios não é apenas para atacar, mas para garantir que você nunca seja pego desprevenido nas chaves de calcanhar.',
+    content: 'Os Segredos da Leg Lock Moderna\n\nCom a evolução competitiva do Jiu-Jitsu sem pano (No-Gi), as chaves de calcanhar (Heel Hooks) e as transições de chaves de perna tornaram-se o ponto divisor das grandes lutas.\n\nFizemos uma análise detalhada dos últimos campeonatos da IJiu-JitsuF e ADCC para decifrar a dinâmica do jogo moderno de chaves de perna:\n\n• Detalhe 1: O posicionamento em Ashi Garami continua sendo a fundação mais segura para a entrada de golpes.\n• Detalhe 2: A transição rápida do Single Leg X para a Honey Hole define os maiores índices de finalizações atuais.\n• Detalhe 3: O sistema defensivo moderno prioriza a rotação do calcanhar antes do encaixe da pressão de joelho.\n\nEstudar esses princípios não é apenas para atacar, mas para garantir que você nunca seja pego desprevenido nas chaves de calcanhar.',
     image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',
     likes: 456,
     comments: 67,
@@ -178,7 +178,7 @@ export const mockPosts = [
     userId: '2',
     userName: 'Ana Paula Silva',
     userBelt: 'roxa',
-    userAcademy: 'Alliance SP',
+    userAcademy: 'Alliance Alphaville',
     category: 'articles',
     content: 'Como Evoluir de Faixa Roxa para a Marrom\n\nA faixa roxa é conhecida como a fase do refinamento técnico e da autonomia. Chegar à faixa marrom exige muito mais do que apenas colecionar posições. Exige mentalidade de professor e consistência tática.\n\n• Mentalidade: Pare de apenas reagir. Você deve começar a antecipar os movimentos do seu oponente de 2 a 3 passos à frente.\n• Refinamento Técnico: Escolha sua guarda preferida e crie respostas sólidas para todas as tentativas de passagem comuns.\n• Preparação Física: Ajuste sua resistência cardiovascular e força isométrica para suportar rolas de 10 minutos de alta intensidade.\n\nA faixa marrom está mais perto do que você imagina, mas exige entrega diária e análise crítica dos seus próprios erros no tatame.',
     image: 'https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=600&q=80',
@@ -240,7 +240,7 @@ export const mockPosts = [
     userBelt: 'azul',
     userAcademy: 'GF Team',
     category: 'images',
-    content: 'Treino em família na GF Team! O BJJ reúne gerações. Amor demais por esse esporte! ❤️',
+    content: 'Treino em família na GF Team! O Jiu-Jitsu reúne gerações. Amor demais por esse esporte! ❤️',
     image: 'https://images.unsplash.com/photo-1552883750-104694c882f7?w=600&q=80',
     likes: 456,
     comments: 78,
@@ -280,7 +280,7 @@ export const beltColors = {
   azul: { bg: '#2B5FAC', text: '#FFFFFF' },
   roxa: { bg: '#7B3FA0', text: '#FFFFFF' },
   marrom: { bg: '#7B4A2D', text: '#FFFFFF' },
-  preta: { bg: '#1A1A1A', text: '#FFFFFF', border: '#555555' },
+  preta: { bg: '#3A3A3A', text: '#FFFFFF', border: '#555555' },
   coral: { bg: '#C0203A', text: '#FFFFFF' },
 }
 
@@ -294,8 +294,8 @@ export const allBelts = [
 ]
 
 export const mockAcademies = [
-  { id: '1', name: 'Alliance SP', city: 'São Paulo, SP' },
-  { id: '2', name: 'Alliance SP', city: 'São Paulo, SP' },
+  { id: '1', name: 'Alliance Alphaville', city: 'São Paulo, SP' },
+  { id: '2', name: 'Alliance Alphaville', city: 'São Paulo, SP' },
   { id: '3', name: 'Checkmat RJ', city: 'Rio de Janeiro, RJ' },
   { id: '4', name: 'Gracie Humaitá', city: 'Curitiba, PR' },
   { id: '5', name: 'Nova União', city: 'Belo Horizonte, MG' },
@@ -305,7 +305,7 @@ export const mockAcademies = [
 export const mockAchievements = [
   { id: '1', title: '1º lugar Paulistano 2023', date: '2023' },
   { id: '2', title: 'Faixa Preta 2022', date: '2022' },
-  { id: '3', title: 'Campeão IBJJF 2021', date: '2021' },
+  { id: '3', title: 'Campeão IJiu-JitsuF 2021', date: '2021' },
 ]
 
 export const mockStoriesContent = {
@@ -314,7 +314,7 @@ export const mockStoriesContent = {
       id: 'ap1',
       type: 'image',
       url: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80',
-      caption: 'Aquecimento pesado hoje na Alliance SP! Foco total na guarda De La Riva. 🥋🔥',
+      caption: 'Aquecimento pesado hoje na Alliance Alphaville! Foco total na guarda De La Riva. 🥋🔥',
       time: '2h',
     },
     {
@@ -360,4 +360,68 @@ export const mockStoriesContent = {
     }
   ]
 }
+
+export const mockMarketplaceItems = [
+  {
+    id: 'm1',
+    name: 'Kimono Shoyoroll Classic A2',
+    price: 890,
+    condition: 'Novo',
+    category: 'Kimonos',
+    image: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80',
+    description: 'Kimono Shoyoroll novo na sacola, nunca usado. Tamanho A2. Edição limitada. Tecido trançado super leve e resistente, ideal para competições ou treinos diários.',
+    seller: {
+      name: 'Thiago Silva',
+      belt: 'preta',
+      academy: 'Alliance-SP',
+      phone: '+55 11 99999-9999'
+    }
+  },
+  {
+    id: 'm2',
+    name: 'Rashguard Vulkan No-Gi M',
+    price: 180,
+    condition: 'Seminovo',
+    category: 'Roupas',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=80',
+    description: 'Rashguard Vulkan oficial de competição. Usada apenas duas vezes. Perfeito estado, sem fios puxados. Tamanho M.',
+    seller: {
+      name: 'Felipe Abreu',
+      belt: 'azul',
+      academy: 'GF Team',
+      phone: '+55 21 98888-8888'
+    }
+  },
+  {
+    id: 'm3',
+    name: 'Seminário de Passagem de Guarda - Rafael Mendes',
+    price: 250,
+    condition: 'Digital',
+    category: 'Cursos',
+    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80',
+    description: 'Curso online completo com mais de 3 horas de conteúdo detalhado sobre passagens de guarda modernas (Torreando, Leg Drag e Passagens de Pressão).',
+    seller: {
+      name: 'Rafael Mendes',
+      belt: 'preta',
+      academy: 'Art of Jiu-Jitsu',
+      phone: '+55 11 97777-7777'
+    }
+  },
+  {
+    id: 'm4',
+    name: 'Faixa Preta Koral Especial A3',
+    price: 120,
+    condition: 'Novo',
+    category: 'Equipamentos',
+    image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&q=80',
+    description: 'Faixa preta Koral novíssima, com ponteira vermelha para graduação. Algodão reforçado de alta qualidade.',
+    seller: {
+      name: 'Loja Koral Oficial',
+      belt: 'preta',
+      academy: 'Distribuidor Autorizado',
+      phone: '+55 11 96666-6666'
+    }
+  }
+]
+
 

@@ -126,8 +126,8 @@ const PostCard = ({ post }) => {
           >
             <Heart
               size={20}
-              fill={liked ? '#C0203A' : 'none'}
-              color={liked ? '#C0203A' : 'currentColor'}
+              fill={liked ? '#42587B' : 'none'}
+              color={liked ? '#42587B' : 'currentColor'}
             />
             <span className="text-xs font-medium">{likes}</span>
           </motion.button>
@@ -154,8 +154,8 @@ const PostCard = ({ post }) => {
         >
           <Bookmark
             size={20}
-            fill={post.bookmarked ? '#C0203A' : 'none'}
-            color={post.bookmarked ? '#C0203A' : 'currentColor'}
+            fill={post.bookmarked ? '#42587B' : 'none'}
+            color={post.bookmarked ? '#42587B' : 'currentColor'}
           />
         </button>
       </div>

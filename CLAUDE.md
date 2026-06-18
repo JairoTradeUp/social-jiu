@@ -1,7 +1,7 @@
-# Social Jiu — Documentação do Projeto
+# App Jiu-jitsu — Documentação do Projeto
 
 ## Visão Geral
-Protótipo de alta fidelidade de uma rede social mobile-first para praticantes de Brazilian Jiu-Jitsu (BJJ). Projeto em fase de prototipagem para apresentação a stakeholders. Todos os dados são mockados (sem backend).
+Protótipo de alta fidelidade de uma rede social mobile-first para praticantes de Jiu-Jitsu. Projeto em fase de prototipagem para apresentação a stakeholders. Todos os dados são mockados (sem backend).
 
 ## Stack Tecnológica
 - **React 18** + **Vite 8**

@@ -52,14 +52,22 @@ const SelectBeltScreen = () => {
           </div>
         </div>
 
-        <Button
-          fullWidth
-          size="lg"
-          onClick={() => navigate('/onboarding/academy')}
-          disabled={!selectedBelt}
-        >
-          Continuar
-        </Button>
+        <div className="w-full flex flex-col items-center gap-4">
+          <Button
+            fullWidth
+            size="lg"
+            onClick={() => navigate('/onboarding/academy')}
+            disabled={!selectedBelt}
+          >
+            Continuar
+          </Button>
+          <button
+            onClick={() => navigate('/onboarding/complete')}
+            className="text-text-secondary hover:text-white text-sm font-medium transition-colors"
+          >
+            Pular
+          </button>
+        </div>
       </div>
     </motion.div>
   )

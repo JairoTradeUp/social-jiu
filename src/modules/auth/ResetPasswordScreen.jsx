@@ -23,7 +23,7 @@ const ResetPasswordScreen = () => {
 
   const strength = getPasswordStrength(password)
   const strengthColor = {
-    weak: '#C0203A',
+    weak: '#42587B',
     medium: '#F59E0B',
     strong: '#10B981',
   }

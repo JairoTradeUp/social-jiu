@@ -6,7 +6,7 @@ const ProgressBar = ({ current = 1, total = 5 }) => {
           key={i}
           className="flex-1 h-1 rounded-full transition-colors duration-300"
           style={{
-            backgroundColor: i < current ? '#C0203A' : '#2A2A2A',
+            backgroundColor: i < current ? '#42587B' : '#2A2A2A',
           }}
         />
       ))}

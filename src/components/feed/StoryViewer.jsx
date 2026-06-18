@@ -19,7 +19,7 @@ const getFallbackStories = (userId, userName) => {
     {
       id: `fallback-${userId}-2`,
       type: 'text',
-      background: 'linear-gradient(135deg, #C0203A 0%, #9A1830 100%)',
+      background: 'linear-gradient(135deg, #324462 0%, #25334c 100%)',
       caption: `🔥 A persistência supera o talento. Mais um dia de evolução no tatame! 🥋`,
       time: '2h',
     }

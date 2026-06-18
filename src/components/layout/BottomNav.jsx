@@ -27,7 +27,7 @@ const BottomNav = () => {
           >
             <Icon
               size={24}
-              color={active ? '#d9434f' : '#FFFFFF'}
+              color={active ? '#42587B' : '#FFFFFF'}
               fill="none"
               className="transition-colors"
             />

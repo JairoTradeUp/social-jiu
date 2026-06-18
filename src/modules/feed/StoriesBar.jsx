@@ -24,7 +24,7 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
   const { stories, addStory } = useApp()
   const containerRef = useRef(null)
   const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 })
-  
+
   // Custom interactive states
   const [isPublisherOpen, setIsPublisherOpen] = useState(false)
   const [isPublishing, setIsPublishing] = useState(false)
@@ -58,7 +58,7 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
   const handlePublish = (type) => {
     setPublishingType(type)
     setIsPublishing(true)
-    
+
     // Simulated Delay
     setTimeout(() => {
       let storyData = {}
@@ -91,7 +91,7 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
       setIsPublisherOpen(false)
       setShowActionSheet(false)
       setShowToast(true)
-      
+
       // Auto-clear toast
       setTimeout(() => {
         setShowToast(false)
@@ -108,11 +108,11 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
         className="flex gap-3 px-4 py-4 cursor-grab active:cursor-grabbing flex-nowrap"
       >
         {/* Seu story */}
-        <button 
+        <button
           onClick={handleStoryClick}
           className="flex flex-col items-center gap-2 flex-shrink-0 select-none"
         >
-          <div className="relative w-14 h-14 rounded-2xl p-[2px] border-2 border-surface-border flex items-center justify-center bg-surface-card hover:opacity-90 transition-opacity">
+          <div className="relative w-16 h-16 rounded-2xl p-[2px] border-2 border-surface-border flex items-center justify-center bg-surface-card hover:opacity-90 transition-opacity">
             <Avatar
               name="Rafael Mendes"
               belt="preta"
@@ -140,9 +140,9 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
               className="flex flex-col items-center gap-2 flex-shrink-0 select-none"
             >
               <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center border-2 hover:opacity-80 transition-opacity p-[2px]"
+                className="w-16 h-16 rounded-2xl flex items-center justify-center border-2 hover:opacity-80 transition-opacity p-[2px]"
                 style={{
-                  borderColor: isSeen ? '#2A2A2A' : '#d9434f',
+                  borderColor: isSeen ? '#2A2A2A' : '#42587B',
                 }}
               >
                 <Avatar
@@ -153,7 +153,7 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
                   className="w-full h-full rounded-[12px] text-xs font-bold"
                 />
               </div>
-              <p className="text-text-primary text-xs font-medium truncate max-w-14">
+              <p className="text-text-primary text-xs font-medium truncate max-w-16">
                 {story.userName}
               </p>
             </button>
@@ -190,7 +190,7 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
             >
               <div className="w-10 h-1 bg-white/20 rounded-full mx-auto mb-2" />
               <h3 className="text-text-primary font-bold text-sm text-center">Seu Story</h3>
-              
+
               <div className="space-y-2">
                 <button
                   onClick={() => {
@@ -227,7 +227,7 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
         {isPublisherOpen && (
           <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-end justify-center z-50">
             <div className="absolute inset-0" onClick={() => !isPublishing && setIsPublisherOpen(false)} />
-            
+
             <motion.div
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
@@ -236,13 +236,13 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
               className="relative w-[390px] bg-surface-card border-t border-surface-border rounded-t-4xl p-6 z-10"
             >
               <div className="w-10 h-1 bg-white/20 rounded-full mx-auto mb-3" />
-              
+
               {isPublishing ? (
                 /* PUBLISHING STATE / SIMULATION VIEW */
                 <div className="flex flex-col items-center justify-center py-8 text-center space-y-4">
                   <div className="relative flex items-center justify-center">
                     <Loader2 className="text-brand-red animate-spin" size={44} />
-                    <span className="absolute text-[10px] text-brand-red font-extrabold animate-pulse">BJJ</span>
+                    <span className="absolute text-[10px] text-brand-red font-extrabold animate-pulse">Jiu-Jitsu</span>
                   </div>
                   <div>
                     <h3 className="text-text-primary font-bold text-sm">
@@ -258,7 +258,7 @@ const StoriesBar = ({ onSelectStory, seenStories = [] }) => {
                 <div className="space-y-5">
                   <div className="text-center">
                     <h3 className="text-text-primary font-extrabold text-sm">Criar Novo Story</h3>
-                    <p className="text-text-secondary text-[10px] mt-0.5">Selecione como quer postar seu momento BJJ</p>
+                    <p className="text-text-secondary text-[10px] mt-0.5">Selecione como quer postar seu momento Jiu-Jitsu</p>
                   </div>
 
                   <div className="grid grid-cols-3 gap-3">
