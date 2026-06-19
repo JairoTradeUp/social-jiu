@@ -19,6 +19,7 @@ import FeedScreen from './modules/feed/FeedScreen'
 import CommentsScreen from './modules/feed/CommentsScreen'
 
 import ExploreScreen from './modules/explore/ExploreScreen'
+import MarketplaceScreen from './modules/explore/MarketplaceScreen'
 
 import ConnectionsScreen from './modules/connections/ConnectionsScreen'
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/messages/:chatId" element={<ChatScreen />} />
           <Route path="/notifications" element={<NotificationsScreen />} />
           <Route path="/explore" element={<ExploreScreen />} />
+          <Route path="/marketplace" element={<MarketplaceScreen />} />
           <Route path="/connections" element={<ConnectionsScreen />} />
           <Route path="/circles" element={<CirclesScreen />} />
 

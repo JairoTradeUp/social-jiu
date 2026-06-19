@@ -51,22 +51,22 @@ const PostCard = ({ post }) => {
       </div>
 
       {/* Conteúdo */}
-      <div className="px-4">
+      <div className="px-4" style={{ fontSize: '15px', letterSpacing: '0.02em', lineHeight: '1.22' }}>
         {post.category === 'articles' ? (
           <div className="flex flex-col mb-3">
             {/* Tag Destaque do Artigo */}
-            <div className="inline-flex items-center gap-1.5 bg-brand-red/10 border border-brand-red/20 text-brand-red px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider w-fit mb-3">
+            <div className="inline-flex items-center gap-1.5 bg-brand-red/10 border border-brand-red/20 text-brand-red px-2.5 py-1 rounded-lg text-[12px] font-bold uppercase tracking-wider w-fit mb-3">
               <span className="w-1.5 h-1.5 bg-brand-red rounded-full animate-pulse" />
               Artigo Técnico
             </div>
-            
+ 
             {/* Renderização de Conteúdo Estilizado com Parágrafos */}
             <div className="space-y-3">
               {post.content.split('\n\n').map((paragraph, index) => {
                 // If it is the first paragraph, make it look like a bold title/lead
                 if (index === 0) {
                   return (
-                    <h3 key={index} className="text-text-primary font-bold text-base leading-snug">
+                    <h3 key={index} className="text-text-primary font-bold leading-snug" style={{ fontSize: '17px', letterSpacing: '0.02em', lineHeight: '1.22' }}>
                       {paragraph}
                     </h3>
                   )
@@ -74,7 +74,7 @@ const PostCard = ({ post }) => {
                 // Bullet point lists
                 if (paragraph.includes('•')) {
                   return (
-                    <ul key={index} className="text-text-secondary text-sm leading-relaxed space-y-1.5 pl-1 my-1">
+                    <ul key={index} className="text-text-secondary space-y-1.5 pl-1 my-1">
                       {paragraph.split('\n').map((bullet, bIndex) => (
                         <li key={bIndex} className="flex items-start gap-2">
                           <span className="text-brand-red mt-1.5 select-none shrink-0 w-1.5 h-1.5 rounded-full bg-brand-red" />
@@ -85,7 +85,7 @@ const PostCard = ({ post }) => {
                   )
                 }
                 return (
-                  <p key={index} className="text-text-secondary text-sm leading-relaxed">
+                  <p key={index} className="text-text-secondary">
                     {paragraph}
                   </p>
                 )
@@ -93,7 +93,7 @@ const PostCard = ({ post }) => {
             </div>
           </div>
         ) : (
-          <p className="text-text-primary text-sm leading-relaxed mb-3">
+          <p className="text-text-primary mb-3">
             {post.content}
           </p>
         )}

@@ -43,54 +43,54 @@ const FeedScreen = () => {
     <div className="w-full h-screen flex flex-col">
       <StatusBar />
 
-      <TopBar
-        leftAction={
-          <img
-            src="/assets/logo-h-social-jiu.png"
-            alt="App Jiu-jitsu"
-            className="h-8 object-contain"
-          />
-        }
-        rightAction={
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => navigate('/messages')}
-              className="text-white hover:opacity-80 transition-opacity"
-            >
-              <MessageCircle size={24} />
-            </button>
-            <button
-              onClick={() => navigate('/notifications')}
-              className="text-white hover:opacity-80 transition-opacity"
-            >
-              <Bell size={24} />
-            </button>
-          </div>
-        }
-      />
-
-      <StoriesBar
-        onSelectStory={(userId) => setActiveStoryUserId(userId)}
-        seenStories={seenStories}
-      />
-
-      <FilterBar activeFilter={activeFilter} onFilterChange={setActiveFilter} />
-
-      {activeFilter === 'search' && (
-        <SearchBar
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-          onClose={() => {
-            setActiveFilter('all')
-            setSearchQuery('')
-          }}
-        />
-      )}
-
-      {activeFilter !== 'search' && <div className="border-b border-surface-border" />}
-
-      {/* Feed */}
+      {/* Scrollable Feed Container */}
       <div className="flex-1 overflow-y-auto pb-20">
+        <TopBar
+          leftAction={
+            <img
+              src="/assets/logo-h-social-jiu.png"
+              alt="App Jiu-jitsu"
+              className="h-8 object-contain"
+            />
+          }
+          rightAction={
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => navigate('/messages')}
+                className="text-white hover:opacity-80 transition-opacity"
+              >
+                <MessageCircle size={24} />
+              </button>
+              <button
+                onClick={() => navigate('/notifications')}
+                className="text-white hover:opacity-80 transition-opacity"
+              >
+                <Bell size={24} />
+              </button>
+            </div>
+          }
+        />
+
+        <StoriesBar
+          onSelectStory={(userId) => setActiveStoryUserId(userId)}
+          seenStories={seenStories}
+        />
+
+        <FilterBar activeFilter={activeFilter} onFilterChange={setActiveFilter} />
+
+        {activeFilter === 'search' && (
+          <SearchBar
+            searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
+            onClose={() => {
+              setActiveFilter('all')
+              setSearchQuery('')
+            }}
+          />
+        )}
+
+        {activeFilter !== 'search' && <div className="border-b border-surface-border" />}
+
         {filteredPosts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}

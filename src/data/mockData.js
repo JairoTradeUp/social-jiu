@@ -364,61 +364,61 @@ export const mockStoriesContent = {
 export const mockMarketplaceItems = [
   {
     id: 'm1',
-    name: 'Kimono Shoyoroll Classic A2',
-    price: 890,
+    name: 'Faixa para jiu jitsu',
+    price: 109.99,
     condition: 'Novo',
-    category: 'Kimonos',
-    image: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80',
-    description: 'Kimono Shoyoroll novo na sacola, nunca usado. Tamanho A2. Edição limitada. Tecido trançado super leve e resistente, ideal para competições ou treinos diários.',
+    category: 'Faixas',
+    image: '/assets/product_belt_purple.png',
+    description: 'Faixa roxa com grau de alta durabilidade e costuras reforçadas.',
     seller: {
-      name: 'Thiago Silva',
-      belt: 'preta',
-      academy: 'Alliance-SP',
+      name: 'Ana Paula Silva',
+      belt: 'roxa',
+      academy: 'Alliance Alphaville',
       phone: '+55 11 99999-9999'
     }
   },
   {
     id: 'm2',
-    name: 'Rashguard Vulkan No-Gi M',
-    price: 180,
-    condition: 'Seminovo',
-    category: 'Roupas',
-    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=80',
-    description: 'Rashguard Vulkan oficial de competição. Usada apenas duas vezes. Perfeito estado, sem fios puxados. Tamanho M.',
+    name: 'Faixa para jiu jitsu',
+    price: 149.99,
+    condition: 'Novo',
+    category: 'Faixas',
+    image: '/assets/product_blue_belt.png',
+    description: 'Faixa preta ponta vermelha edição especial Alliance Est. 1993.',
     seller: {
-      name: 'Felipe Abreu',
-      belt: 'azul',
-      academy: 'GF Team',
-      phone: '+55 21 98888-8888'
+      name: 'Thiago Silva',
+      belt: 'preta',
+      academy: 'Alliance-SP',
+      phone: '+55 11 98888-8888'
     }
   },
   {
     id: 'm3',
-    name: 'Seminário de Passagem de Guarda - Rafael Mendes',
-    price: 250,
-    condition: 'Digital',
-    category: 'Cursos',
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80',
-    description: 'Curso online completo com mais de 3 horas de conteúdo detalhado sobre passagens de guarda modernas (Torreando, Leg Drag e Passagens de Pressão).',
+    name: 'Kimono Jiu Jitsu Preto',
+    price: 699.90,
+    condition: 'Novo',
+    category: 'Kimonos',
+    image: '/assets/product_black_belt.png',
+    description: 'Conjunto completo preto, ultra resistente, corte de competição.',
     seller: {
-      name: 'Rafael Mendes',
+      name: 'Distribuidora Oficial',
       belt: 'preta',
-      academy: 'Art of Jiu-Jitsu',
+      academy: 'Alliance Jiu Jitsu',
       phone: '+55 11 97777-7777'
     }
   },
   {
     id: 'm4',
-    name: 'Faixa Preta Koral Especial A3',
-    price: 120,
+    name: 'Bolsa para jiu jitsu Alliance',
+    price: 199.99,
     condition: 'Novo',
-    category: 'Equipamentos',
-    image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&q=80',
-    description: 'Faixa preta Koral novíssima, com ponteira vermelha para graduação. Algodão reforçado de alta qualidade.',
+    category: 'Acessórios',
+    image: '/assets/product_bag.png',
+    description: 'Bolsa estanque Alliance Jiu-Jitsu Team para equipamentos molhados.',
     seller: {
-      name: 'Loja Koral Oficial',
+      name: 'Loja Oficial Alliance',
       belt: 'preta',
-      academy: 'Distribuidor Autorizado',
+      academy: 'Alliance Alphaville',
       phone: '+55 11 96666-6666'
     }
   }

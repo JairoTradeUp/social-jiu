@@ -1,4 +1,4 @@
-import { Home, Compass, Users, User, Circle } from 'lucide-react'
+import { Home, Compass, Users, User, Circle, ShoppingBag } from 'lucide-react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 const BottomNav = () => {
@@ -8,6 +8,7 @@ const BottomNav = () => {
   const navItems = [
     { path: '/feed', icon: Home, label: 'Home', id: 'home' },
     { path: '/explore', icon: Compass, label: 'Explorar', id: 'explore' },
+    { path: '/marketplace', icon: ShoppingBag, label: 'Marketplace', id: 'marketplace' },
     { path: '/connections', icon: Users, label: 'Conexões', id: 'connections' },
     { path: '/circles', icon: Circle, label: 'Círculos', id: 'circles' },
     { path: '/profile', icon: User, label: 'Perfil', id: 'profile' },
